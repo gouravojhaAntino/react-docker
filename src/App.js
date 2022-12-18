@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 function App() {
   const [slang,setSlang] = useState("")
   useEffect(async () => {
-    const response = await axios.get('http:localhost:8080/api')
+    const response = await axios.get('/api')
     const data = response.data.message
     setSlang(data)
   },[])
